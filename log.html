@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css'>
+        <link rel="stylesheet" href="logstyle.css">
+    </head>
+    <body>  
+    <style type="text/css">
+       html, body {
+       width: 100%;
+       height:100%;
+       }
+       
+       ::placeholder{
+       color:gray;
+       font-size:30px;
+       text-bottom :2px;
+       letter-spacing:1px;
+       }
+       input{
+       color:black;
+       letter-spacing:1px;
+       }
+       
+       body {
+       background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+       background-size: 300% 300%;
+       animation: gradient 10s ease infinite;
+       }
+       
+       @keyframes gradient {
+       0% {
+       background-position: 0% 50%;
+       }
+       50% {
+       background-position: 100% 50%;
+       }
+       100% {
+       background-position: 0% 50%;
+       }
+       }
+       
+       
+       
+       .main{
+       height:1100px;
+       width:750px;
+       border:3px solid translate3d ; 
+       padding:20px;
+       position:absolute;
+       margin:40px;
+       background:white;
+       border-radius:15px;
+       left:5%;
+       top:10%;
+       overflow:hidden ;
+       box-shadow:0 15px 28px 0 rgba(0,0,0,0.2);
+       }
+       .main:hover{
+       /*margin:38px;
+       height:464px;
+       width:394px;*/
+       box-shadow:0 36px 52px 0 rgba(0,0,0,0.2);
+       }
+       .email{
+       border:none;    
+       margin-top:270px;
+       margin-left:74px;
+       width:60%;    
+       outline:none;
+       margin-bottom:25px;
+       border-bottom: 2px solid #e12020;
+       background: none;
+       padding: 10px;
+       padding-left: 40px;
+       font-weight: 700;
+       width: 75%;
+       font-size:35px;
+       }
+       .pass:hover{
+       border-color:#00ff77;
+       }
+       .email:hover{
+       border-color:#00ff77;
+       }
+       .pass{
+       border:none;
+       margin-top:60px;
+       margin-left:74px;
+       width:60%;    
+       outline:none;      
+       margin-bottom:25px;    
+       border-bottom: 2px solid #e12020;
+       background: none;
+       padding: 10px;
+       padding-left: 40px;
+       font-weight: 700;
+       width: 75%;
+       font-size:35px;
+       
+       }
+       .fas{
+       position:absolute ;
+       color:black;
+       font-size:31px;
+       top:376px;
+       right:666px;
+       }
+       .fa{
+       position:absolute ;
+       color:black;
+       font-size:31px;
+       top:524px;
+       right:666px;  
+       }
+       .reset{
+       color:black;
+       margin-left:105px;
+       height:44px;
+       width:200px;
+       border-radius:25px;
+       border:3px solid lightblue;
+       background-color:green;
+       box-shadow:0 6px 8px 0 rgba(0,0,0,0.2);
+       text-align:center ;
+       }
+       .btn:hover{
+       background:red;
+       box-shadow:0 26px 52px 0 rgba(0,0,0,0.2);
+       }
+       h1{
+       margin-left:105px;
+       text-shadow:4px 4px 4px ;
+       }
+       .pl {
+       background-color:red;
+       
+       height:60px;
+       transform:rotate(50deg);
+       width:400px;
+       position:relative  ;
+       left:494px;
+       box-shadow:0 0 7px black;
+       color:white;
+       text-align:center ;
+       display:grid;
+       font-size:28px;
+       place-items:center ;
+       top:38px;
+       foot-weight:bold;
+       }
+       
+       .img{
+       position:absolute;
+       height: 170px;
+       width:170px;
+       
+       right:38%;
+       top:80px;
+       }
+       .abir{
+       position:absolute ;
+       right:36%;
+       top:264px;
+       font-size:33px;
+       }
+       
+       .button{
+       height:75px;
+       width:410px;
+       position:absolute ;
+       border-radius:15px;
+       background-color:#00FFCB;
+       border:none;
+       top:590px;
+       left:24%;
+       box-shadow:0 16px 22px 0 rgba(0,0,0,0.3);
+       transition:all 0.50s;
+       font-size:26px;
+       font-weight:bold;
+       }
+       .button:hover{
+       box-shadow:inset 0 16px 22px 0 rgba(0,0,0,0.5);
+       transform:translateY(-6px);
+       outline:5px solid #00FFCB;
+       outline-offset:4px;
+       }
+       .bpn{
+       background-color:red;
+       width:130px;
+       height:48px;
+       border:none;
+       outline:none;
+       border-radius:10px;
+       }
+       .btn{
+       background-color:lightgreen;
+       height:48px;
+       width:130px;
+       border:none;
+       outline:none;
+       margin:10px;
+       margin-left:60px;
+       border-radius:10px;
+       
+       }
+       
+       .bpn,.btn{
+       height:50px;
+       font-size:18px;
+       text-align:center ;
+       box-shadow:inset 0 14px 17px 0 rgba(0,0,0,0.4);
+       font-weight:bold ;
+       text-decoration:none;
+       }
+    </style>      
+            <div class="main">
+            <div class="pl">Login Page</div>
+        <form action="login.php" method="post">
+        <img class="img" src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="profile">
+        <div class="abir">Abir Hossain</div>
+            <input class="email"type="email"placeholder="Enter email" name="email" required><i class="fas fa-user" required></i>
+            <i class="fa fa-lock"></i>
+            <input class="pass"type="password"placeholder="Enter password" name="pass" minlength="8" maxlength="100" required>
+            <br/>
+            <div class="bp"></div>
+            <div class="wrap">
+            <input class="button"type="submit" value="Log In">
+            </div>
+            <!--<input type="reset" class="reset">-->
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+         <script src="https://kit.fontawesome.com/552a632725.js" crossorigin="anonymous"></script>
+                 <script>
+document.querySelector('.button').onclick = function(){
+const swalWithBootstrapButtons = Swal.mixin({
+  customClass: {
+    confirmButton: 'btn btn-success',
+    cancelButton: 'bpn btn-danger'
+  },
+  buttonsStyling: false
+})
+swalWithBootstrapButtons.fire({
+  title: "<h style='color:black'>Congratulation</h>",
+  html:"<strong>Login Succesfully</strong>",
+  showCloseButton: true, 
+  color:'#716add',
+  icon: 'success',
+  background:'rgba(255,255,255)',
+  showCancelButton: true,
+  cancelButtonText: 'Cancel',
+  timer: 5000, 
+  timerProgressBar: true,
+  confirmButtonText: 'Continue',
+  reverseButtons: true
+}).then((result) => {
+ if (result.isConfirmed) { 
+ window.open("#"); } 
+ })}
+        </script>
+    </body>
+</html>
